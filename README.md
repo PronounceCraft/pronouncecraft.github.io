@@ -1,4 +1,4 @@
-# PronounCe Craft
+# PronounceCraft
 
 ## Overview
 PronounCe Craft is a powerful tool designed to help users understand the pronunciation of English words using the International Phonetic Alphabet (IPA).
