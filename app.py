@@ -1,6 +1,7 @@
 import re
 from flask import Flask, request, jsonify, render_template
 import pandas as pd
+import os
 
 app = Flask(__name__)
 
@@ -174,4 +175,5 @@ def process_input():
     return jsonify({'output': combined_output})
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)
+    debug_mode = os.getenv('FLASK_DEBUG', 'False').lower() in ['true', '1', 't']
+    app.run(debug=debug_mode, port=5001)
