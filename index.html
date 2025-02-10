@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PronounceCraft</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="static/index.css">
+    <link rel="shortcut icon" type="image/x-icon" href="https://i.postimg.cc/SNzSSdcB/pc-icon.png">
+
+</head>
+<body>
+    <div class="hero">
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                    <img src='https://i.postimg.cc/25zC0zcP/pronouncecreaftlogo-1.png' border='0' alt='pronouncecreaftlogo-1' width='240' height='70'/>
+                </div>
+                <div class="nav-container">
+                    <button class="hamburger" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="templates/howtouse.html#about-me">About</a></li>
+                        <li><a href="templates/howtouse.html">How to use</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p>Refine your speech — convert text into phonetic transcription.</p>
+            <div class="input-container">
+                <textarea id="input-text" placeholder="Paste your text or paragraph here"></textarea>
+                <div class="button-wrapper">
+                    <button id="search-button">Get IPA</button>
+                    <button id="clear-button" title="Clear Input">
+                        <img src="https://i.postimg.cc/HnH551NF/Fire-clear-input.png" alt="Clear Input" style="width: 24px; height: 24px;">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="features">
+        <div class="container">
+
+            <!-- Advertisement TOP Section -->
+            <div class="advertisement advertisement-1">
+                <!-- Placeholder for top advertisement -->
+                <div style="width: 100%; height: 50px; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center;">
+                    <span>Advertisement Space</span>
+                </div>
+            </div>
+
+            <!-- New Section for Output and Ads -->
+            <div class="output-and-ads">
+                <!-- Left Advertisement -->
+                <div class="advertisement-left">
+                    <h2>Left Ad</h2>
+                    <!-- Placeholder for left advertisement -->
+                    <div style="width: 100%; height: 300px; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center;">
+                        <span>Advertisement Space</span>
+                    </div>
+                </div>
+
+                <!-- Output Container -->
+                <div class="output-section">
+                    <h2 id="phonetic-transcription" class="transcription-title">Phonetic Transcription</h2>
+                    <div id="output-container">
+                        <div class="output-header">
+                            <div class="button-container">
+                                <div class="button-group">
+                                    <button id="copy-button" title="Copy">📋</button>
+                                    <button id="copy-highlighted-button" title="Copy Highlighted">📑</button>
+                                    <label class="toggle-container">
+                                        <input type="checkbox" id="attributes-toggle">
+                                        <span class="toggle-slider"></span>
+                                        <span class="toggle-label">Attributes</span>
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" class="highlight-checkbox" data-color="rgb(174, 255, 0)">
+                                        <span class="checkmark" style="border-color: rgb(174, 255, 0);"></span>
+                                        <span class="checkbox-label">Mispronounced</span>
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" class="highlight-checkbox" data-color="rgb(0, 255, 140)">
+                                        <span class="checkmark" style="border-color: rgb(0, 255, 140);"></span>
+                                        <span class="checkbox-label">Mostly spoken</span>
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" id="Phrasal-verb-toggle" class="highlight-checkbox" data-color="rgb(255, 165, 0)">
+                                        <span class="checkmark" style="border-color: rgb(255, 165, 0);"></span>
+                                        <span class="checkbox-label">Phrasal verb</span>
+                                    </label>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" class="highlight-checkbox" data-color="rgb(0, 255, 140)">
+                                        <span class="checkmark" style="border-color: rgb(7, 65, 181);"></span>
+                                        <span class="checkbox-label">Syllables</span>
+                                    </label>
+                                </div>
+                                <div class="button-group">
+                                    <button id="pdf-button" title="Download PDF">⤓</button>
+                                    <button id="download-highlighted-button" title="Download highlighted PDF">↯</button>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" class="highlight-checkbox" data-color="rgb(255, 0, 140)">
+                                        <span class="checkmark" style="border-color: rgb(255, 0, 140);"></span>
+                                        <span class="checkbox-label">Correction spoken</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="output-text"></div>
+                    </div>
+                </div>
+
+                <!-- Right Advertisement -->
+                <div class="advertisement-right">
+                    <h2>Right Ad</h2>
+                    <!-- Placeholder for right advertisement -->
+                    <div style="width: 100%; height: 300px; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center;">
+                        <span>Advertisement Space</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="highlight.js"></script>
+    
+
+    <!-- Back to top -->
+    <a href="#" class="top">Back to Top</a>
+
+        <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        
+                        <li><a href="templates/howtouse.html#about-me">About</a></li>
+                        <li><a href="templates/privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="templates/howtouse.html">How to use</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Update</h4>
+                    <ul>
+                        
+                        <li><a href="templates/howtouse.html#upcomings">Upcoming</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="mailto:pronouncecraft@gmail.com">Email</a></li>
+                        <li><a href="#">Phone: +91</a></li>
+                        <li><a href="#">Send Message</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
