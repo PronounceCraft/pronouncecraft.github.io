@@ -1,0 +1,238 @@
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8">
+    <title>PronounceCraft Howtouse</title>
+    <meta name="robots" content="noindex">
+    <link rel="shortcut icon" type="image/x-icon" href="https://i.postimg.cc/SNzSSdcB/pc-icon.png">
+    <!-- <link rel="mask-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style id="INLINE_PEN_STYLESHEET_ID">
+      :root {
+        --accent-color: #f5a841;
+      }
+
+      section [class^="container"] {
+        padding: 4rem 2rem;
+      }
+
+      @media screen and (min-width: 1024px) {
+        section [class^="container"] {
+          padding: 4rem;
+        }
+
+        nav [class^="container"] {
+          padding: 0 4rem;
+        }
+      }
+
+      section:not(:first-of-type) {
+        text-align: center;
+      }
+
+      section:nth-child(2n) {
+        background-color: #ecf2ff;
+      }
+
+      .container a {
+        color: #000000;
+        text-decoration: none;
+      }
+
+      .container a:hover {
+        color: var(--accent-color);
+      }
+
+      section .card,
+      .btn-outline-dark {
+        border: 2px solid #000000;
+        box-shadow: 4px 4px #000000;
+        transition: all 0.4s;
+      }
+
+      .btn-outline-dark:hover {
+        box-shadow: 4px 4px var(--accent-color);
+      }
+
+      /* NAVBAR */
+      .navbar {
+        background-color: #ffffff;
+      }
+
+      .navbar-nav .nav-link {
+        color: #000000;
+        font-size: 1.1rem;
+        transition: all 0.5s;
+      }
+
+      .navbar-nav .nav-link:hover {
+        color: var(--accent-color);
+      }
+
+      @media screen and (min-width: 1024px) {
+        .navbar-nav .nav-item {
+          padding: 0 1rem;
+        }
+
+        .navbar-brand {
+          font-size: 1.5rem;
+        }
+      }
+
+      /* HERO */
+      section.hero {
+        padding-top: 72px;
+      }
+
+      @media screen and (max-width: 576px) {
+        section.hero {
+          text-align: center;
+        }
+
+        section.hero img {
+          width: 80%;
+          margin: 0.5rem 0;
+        }
+      }
+
+      /* SERVICES */
+      section.services i {
+        font-size: 2rem;
+        margin: 1rem auto 0;
+        border: 2px solid #000000;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--accent-color);
+      }
+
+      section .card {
+        max-width: 22rem;
+        margin-inline: auto;
+      }
+
+      /* ABOUT */
+      @media screen and (min-width: 1024px) {
+
+        section.about .container,
+        section.testimonials .container {
+          width: 60%;
+        }
+      }
+
+      /* PROJECTS */
+      section.projects .card {
+        max-width: 17rem;
+        text-align: left;
+      }
+
+      section.projects .card img {
+        max-width: 70%;
+        margin: 1rem auto;
+      }
+
+      /* TESTIMONIALS */
+      section.testimonials .carousel-control-prev,
+      .carousel-control-next {
+        width: 5%;
+      }
+
+      section.testimonials .carousel-item p {
+        max-width: 80%;
+        border-left: 5px solid var(--accent-color);
+        padding-left: 1rem;
+        text-align: left;
+      }
+
+      section.testimonials .carousel-item h5 {
+        text-align: left;
+      }
+
+      section.testimonials .carousel-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      section.testimonials .carousel.carousel-fade .carousel-item {
+        transition: opacity 0.5s;
+      }
+
+      /* CONTACT */
+      section.contact .social-media a {
+        padding: 0 0.5rem;
+        font-size: 1.3rem;
+      }
+    </style>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+    <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-6d8bf8b4b479137260842506acbb12717dace0823c023e08b96360e60b0840d9.js"></script>
+    <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
+    <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+      <div class="container-lg">
+        <div class="me-auto"></div>
+        <a class="navbar-brand fw-bold" href="{{ url_for('index') }}">PronounceCraft</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('about') }}">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('index') }}#upcomings">Upcomings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('index') }}#testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-lg-none" href="{{ url_for('index') }}#contact">Contact</a>
+            </li>
+          </ul>
+          <a class="btn btn-outline-dark d-none d-lg-block" href="{{ url_for('index') }}#contact">Let's Talk</a>
+        </div>
+      </div>
+    </nav>
+    <div class="container" style="margin-top: 100px;">
+      <h1 class="text-center">Privacy Policy for PronounceCraft</h1>
+      <section class="text-start">
+        <h2>Purpose of Use</h2>
+        <p>The use of the PronounceCraft website is solely for learning and educational purposes.</p>
+      </section>
+      <section class="text-start">
+        <h2>User Responsibility</h2>
+        <p>You are solely responsible for the sentences, paragraphs, or content you use for phonetic transcription; we do not accept any responsibility for their use.</p>
+      </section>
+      <section class="text-start">
+        <h2>Data Handling</h2>
+        <p>We do not collect, store, or utilize any customer data for any purpose.</p>
+      </section>
+      <section class="text-start">
+        <h2>Additional Privacy Information</h2>
+        <ul class="list-unstyled">
+          <li>• No personal information is stored</li>
+          <li>• No tracking mechanisms are employed</li>
+          <li>• All processing is done anonymously and transiently</li>
+        </ul>
+      </section>
+      <section class="text-start">
+        <h2>Contact Information</h2>
+        <p>For any questions or concerns, please contact us at: support@pronouncecraft.com</p>
+      </section>
+      <footer class="text-start">
+        <p>Last Updated: February 2025</p>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
