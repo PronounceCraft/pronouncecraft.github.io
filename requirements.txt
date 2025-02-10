@@ -18,4 +18,4 @@ pytz==2024.2
 setuptools==70.0.0
 six==1.16.0
 tzdata==2024.1
-Werkzeug==3.0.2
+Werkzeug==3.0.6
