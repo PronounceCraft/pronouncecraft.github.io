@@ -3,7 +3,7 @@ click==8.1.7
 colorama==0.4.6
 et-xmlfile==1.1.0
 Flask==3.0.3
-flask-cors==4.0.0
+flask-cors==4.0.2
 flask-limiter==3.5.0
 gunicorn==22.1.0
 itsdangerous==2.2.0
