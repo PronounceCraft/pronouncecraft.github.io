@@ -100,7 +100,7 @@ body {
         left: 0;
         width: 100%;
         flex-direction: column;
-        background: rgba(0, 0, 0, 0.961);
+        background: #000000;
         padding: 20px 0;
         z-index: 1000;
         text-align: center;
@@ -408,75 +408,48 @@ body {
     .button-container {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         gap: 8px;
         width: 100%;
         position: relative;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+        scrollbar-width: thin; /* Thin scrollbar for Firefox */
+        scrollbar-color: #888 #f1f1f1; /* Scrollbar colors */
+    }
+
+    .button-container::-webkit-scrollbar {
+        height: 16px;
+        width: 16px; /* Match width for horizontal scrollbar */
+    }
+
+    .button-container::-webkit-scrollbar-track {
+        border-radius: 8px;
+        background-color: #e7e7e7;
+        border: 1px solid #d55959;
+    }
+
+    .button-container::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        border: 3px solid transparent;
+        background-clip: content-box;
+        background-color: #d55959;
     }
 
     .button-group {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         gap: 8px;
-        width: auto;
+        min-width: max-content; /* Ensure content doesn't shrink */
     }
 
     .toggle-container {
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 10;
-    }
-
-    #copy-button, #copy-highlighted-button {
-        position: static;
-        margin: 0;
-    }
-
-    .checkbox-container {
-        display: none;
-    }
-
-    #attributes-toggle:checked ~ .checkbox-container {
-        display: inline-flex;
-    }
-
-    #pdf-button, #download-highlighted-button {
-        order: 2;
-    }
-
-    #copy-button, #pdf-button, #copy-highlighted-button, #download-highlighted-button {
-        flex-shrink: 0;
-        width: auto;
-        margin: 0;
-    }
-
-    .checkbox-container {
-        padding-left: 22px;
-        margin: 0 3px;
-        font-size: 13px;
-        white-space: nowrap;
-    }
-
-    .checkmark {
-        height: 16px;
-        width: 16px;
-    }
-
-    .checkbox-container .checkmark:after {
-        left: 4px;
-        top: 1px;
-        width: 3px;
-        height: 8px;
-    }
-
-    .checkbox-label {
-        font-size: 12px;
+        position: static; /* Reset absolute positioning */
+        flex-shrink: 0; /* Prevent shrinking */
     }
 }
 
