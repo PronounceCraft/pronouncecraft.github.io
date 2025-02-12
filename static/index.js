@@ -1,3 +1,39 @@
+// Place holder for input-text
+document.addEventListener("DOMContentLoaded", function() {
+  const textarea = document.getElementById("input-text");
+  const placeholderText = "Paste your text or paragraph here";
+  let index = 0;
+
+  function type() {
+      if (index < placeholderText.length) {
+          textarea.placeholder = placeholderText.substring(0, index + 1);
+          index++;
+          setTimeout(type, 50); // Typing speed
+      } else {
+          // Once typing is complete, keep the placeholder visible
+          textarea.placeholder = placeholderText; // Ensure the full placeholder is shown
+      }
+  }
+
+  type();
+
+  // Clear placeholder on focus if the textarea is empty
+  textarea.addEventListener("focus", function() {
+      if (textarea.value === "") {
+          textarea.placeholder = ""; // Clear placeholder only if textarea is empty
+      }
+  });
+
+  // Restore placeholder if textarea is empty on blur
+  textarea.addEventListener("blur", function() {
+      if (textarea.value === "") {
+          textarea.placeholder = placeholderText; // Restore placeholder if textarea is empty
+      }
+  });
+});
+
+// End of Place holder for input-text
+
 // Search button functionality
 document.getElementById("search-button").addEventListener("click", function() {
     var inputText = document.getElementById("input-text").value;
